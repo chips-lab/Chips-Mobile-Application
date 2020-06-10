@@ -1,7 +1,11 @@
 # Chips Mobile Application
 _Chips App Details_
 
-
+<table>
+   <tr>
+      <td><img src="logo.png" height = "270" width="270"></td>
+  </tr>
+</table>
 
 
 ### Features
