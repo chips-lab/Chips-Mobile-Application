@@ -1,7 +1,6 @@
 # Chips Mobile Application
 _Chips App Details_
 
-# Screenshots
 <table>
    <tr>
       <td><img src="static/1.png" height = "270" width="270"></td>
