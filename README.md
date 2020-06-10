@@ -20,4 +20,4 @@ _Chips App Details_
 ### Website Link
 Link: http://(to Be Create)
 
-_Disclaimer: Ownership of this repostiory will be transfered when Chips activates GitHub Account_
+_Disclaimer: Ownership of this repository will be transferred when Chips activates GitHub Account_
