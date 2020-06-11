@@ -27,4 +27,3 @@ _Later Work to be Done_
 ### Website Link
 Link: http://(to Be Create)
 
-_Disclaimer: Ownership of this repository will be transferred when Chips activates GitHub Account_
