@@ -1,13 +1,17 @@
 import React, { Component } from 'react';
-
-class Navigation extends Component {
+import Post from './post';
+class Posts extends Component {
     render() {
         return (
             <div>
-                Nav
+    
+
+<Post/>
+
+
             </div>
         );
     }
 }
 
-export default Navigation;
+export default Posts;

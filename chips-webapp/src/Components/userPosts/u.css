@@ -1,0 +1,263 @@
+
+ 
+input,
+select,
+button,
+textarea {
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+}
+
+.wrapper {
+  padding: px;
+  
+  margin: 0 auto;
+}
+
+.section-header {
+  display: block;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #9faab7;
+  font-size: 11.4285714286px;
+  margin-bottom: 16px;
+}
+
+.form-group {
+  border: 1px solid #c0ccda;
+  margin-bottom: 16px;
+  border-radius: 4px;
+}
+.form-group:focus-within {
+  border-color: #270d7c;
+}
+.form-group input,
+.form-group select {
+  -moz-appearance: none;
+       appearance: none;
+  -webkit-appearance: none;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  padding: 16px;
+  display: block;
+  box-sizing: border-box;
+}
+.form-group span {
+  padding: 16px;
+  color: #9faab7;
+}
+.form-group .legend-top span {
+  position: absolute;
+  margin-top: -60px;
+  opacity: 0;
+  -webkit-transition: all 0.05s ease-in-out;
+  transition: all 0.05s ease-in-out;
+}
+.form-group .legend-top input,
+.form-group .legend-top select {
+  width: 100%;
+}
+.form-group .legend-top input:not(:placeholder-shown) ~ span,
+.form-group .legend-top select:not(:placeholder-shown) ~ span {
+  opacity: 1;
+  font-size: 11.2px;
+  background-color: white;
+  color: #9faab7;
+  padding: 2px 4px;
+  margin: -58px 0 0 11.2px;
+}
+.form-group .legend-side {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+          flex-direction: row-reverse;
+  -webkit-box-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+}
+.form-group .legend-side input,
+.form-group .legend-side select,
+.form-group .legend-side span {
+  -webkit-box-flex: 1;
+          flex: 1 1 50%;
+}
+.form-group .legend-side input,
+.form-group .legend-side select {
+  text-align: right;
+  width: 100%;
+}
+.form-group .legend-side select {
+  -moz-text-align-last: right;
+       text-align-last: right;
+}
+.form-group .legend-side span {
+  color: #9faab7;
+}
+
+
+
+
+
+
+
+
+
+
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css);
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+
+
+h2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 26px;
+  line-height: 1;
+  color: #454cad;
+  margin-bottom: 0;
+}
+
+p {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  color: #5f6982;
+}
+
+.uploader {
+  display: block;
+  clear: both;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 600px;
+}
+.uploader label {
+  float: left;
+  clear: both;
+  width: 100%;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  background: #fff;
+  border-radius: 7px;
+  border: 3px solid #eee;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.uploader label:hover {
+  border-color: #454cad;
+}
+.uploader label.hover {
+  border: 3px solid #454cad;
+  box-shadow: inset 0 0 0 6px #eee;
+}
+.uploader label.hover #start i.fa {
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+  opacity: 0.3;
+}
+.uploader #start {
+  float: left;
+  clear: both;
+  width: 100%;
+}
+.uploader #start.hidden {
+  display: none;
+}
+.uploader #start i.fa {
+  font-size: 50px;
+  margin-bottom: 1rem;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.uploader #response {
+  float: left;
+  clear: both;
+  width: 100%;
+}
+.uploader #response.hidden {
+  display: none;
+}
+.uploader #response #messages {
+  margin-bottom: 0.5rem;
+}
+.uploader #file-image {
+  display: inline;
+  margin: 0 auto 0.5rem auto;
+  width: auto;
+  height: auto;
+  max-width: 180px;
+}
+.uploader #file-image.hidden {
+  display: none;
+}
+.uploader #notimage {
+  display: block;
+  float: left;
+  clear: both;
+  width: 100%;
+}
+.uploader #notimage.hidden {
+  display: none;
+}
+.uploader progress,
+.uploader .progress {
+  display: inline;
+  clear: both;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 180px;
+  height: 8px;
+  border: 0;
+  border-radius: 4px;
+  background-color: #eee;
+  overflow: hidden;
+}
+.uploader .progress[value]::-webkit-progress-bar {
+  border-radius: 4px;
+  background-color: #eee;
+}
+.uploader .progress[value]::-webkit-progress-value {
+  background: -webkit-gradient(linear, left top, right top, from(#393f90), color-stop(50%, #454cad));
+  background: linear-gradient(to right, #393f90 0%, #454cad 50%);
+  border-radius: 4px;
+}
+.uploader .progress[value]::-moz-progress-bar {
+  background: linear-gradient(to right, #393f90 0%, #454cad 50%);
+  border-radius: 4px;
+}
+.uploader input[type="file"] {
+  display: none;
+}
+.uploader div {
+  margin: 0 0 0.5rem 0;
+  color: #5f6982;
+}
+.uploader .btn {
+  display: inline-block;
+  margin: 0.5rem 0.5rem 1rem 0.5rem;
+  clear: both;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 14px;
+  text-decoration: none;
+  text-transform: initial;
+  border: none;
+  border-radius: 0.2rem;
+  outline: none;
+  padding: 0 1rem;
+  height: 36px;
+  line-height: 36px;
+  color: #fff;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  box-sizing: border-box;
+  background: #454cad;
+  border-color: #454cad;
+  cursor: pointer;
+}
+
+
