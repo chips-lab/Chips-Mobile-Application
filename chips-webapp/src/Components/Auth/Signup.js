@@ -1,35 +1,24 @@
 import React, { Component } from 'react';
 import './s.css';
 class Signup extends Component {
-    render() {
-        return (
-            <div>
-    
-    <br/>
-    <div class="wrapper">
-      <div id="box">
-        <img src="https://image.freepik.com/free-icon/refresh_318-33117.jpg" alt="lock" />
-        <h3>Sign up</h3>
+  render() {
+    return (
+      <div className="login-container">
         <form>
-        <input type="text" placeholder="First name" />
-        <input type="text" placeholder="Last name" />
-        <input type="email" placeholder="Email" />
-        <input type="password" placeholder="PASSWORD" />
-        <input type="password" placeholder="Confirm PASSWORD" />
-
+          <img width="230" src="/logo_black.png" />
+          <p class="login-header">Sign Up</p>
+          <input type="text" className="fields" placeholder="First name" /><br />
+          <input type="text" className="fields" placeholder="Last name" /><br />
+          <input type="text" className="fields" placeholder="Email" /><br />
+          <input type="password" className="fields" placeholder="Password" /><br />
+          <input type="password" className="fields" placeholder="Confirm Password" /><br />
+          <input type="submit" className="submit" /><br />
+          <a className="signup">Already Registered? Log in here.</a>
         </form>
-         <a href="#">forgot ?</a>
-         <input onclick="this.style.backgroundColor = '#69c061';" type="submit" value="Register"/>
-        
-        <div class="signup">
-          <p>not a member ? <a href="#">sign in</a></p>
-        </div>
+
       </div>
-    </div>
-  
-            </div>
-        );
-    }
+    );
+  }
 }
 
 export default Signup;

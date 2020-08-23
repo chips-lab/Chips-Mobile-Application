@@ -19,7 +19,7 @@ class uPost extends Component {
 	<div class="form-group">
 		<label class="legend-top">
 			<input type="text" placeholder="Full Name" />
-			<span>Full Name</span>
+			<span></span>
 		</label>
 	</div>
 
@@ -33,7 +33,7 @@ class uPost extends Component {
 		<span class="section-header">Also works for Select</span>
         <textarea id="textarea" class="form-control mb-4" placeholder="Textarea"></textarea>
 
-
+<div className="position">
         <div id="file-upload-form" class="uploader">
   <input id="file-upload" type="file" name="fileUpload" accept="image/*" />
 
@@ -53,7 +53,9 @@ class uPost extends Component {
     </div>
   </label>
 </div>
-
+</div>
+<br/>
+<button type="button" class="btn btn-unique">Create</button>
 
 </form>
 

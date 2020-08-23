@@ -9,7 +9,7 @@ textarea {
 }
 
 .wrapper {
-  padding: px;
+  padding: 70px;
   
   margin: 0 auto;
 }
@@ -106,6 +106,7 @@ textarea {
 
 
 
+
 @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css);
 @import url("https://fonts.googleapis.com/css?family=Roboto");
 
@@ -125,11 +126,7 @@ p {
 }
 
 .uploader {
-  display: block;
-  clear: both;
-  margin: 0 auto;
-  width: 100%;
-  max-width: 600px;
+
 }
 .uploader label {
   float: left;
@@ -261,3 +258,6 @@ p {
 }
 
 
+.Position {
+  
+}

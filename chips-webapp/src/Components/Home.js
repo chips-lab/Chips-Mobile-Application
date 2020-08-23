@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Posts  from './userPosts/Posts';
+import Posts  from './Post/Posts';
 import Resource from './Resources/ResourceCorsol';
 import {
     BrowserRouter as Router,
@@ -7,16 +7,31 @@ import {
     Route,
     Link,
     useRouteMatch,
-    useParams
+    useParams, 
+    Redirect
   } from "react-router-dom";
-class Home extends Component {
-    render() {
+  import fire from '../Config/Fire';
+const  Home = () => {
+
+
+     const Logout =()=>{
+
+        fire.auth.signOut();
+       
+       
+        return <Redirect to="/" />
+       
+         }
+
+
+   
         return (
             <div>
 
                 <div>
 <Link  className="btn  btn-elegant" to={{ pathname: '/createPost'}}>create</Link>
-<button type="button" class="btn btn-unique">Unique</button>
+
+<a  type="button" class="btn btn-unique" onClick={Logout}> Logout</a>
 
                 </div>
 <hr/>
@@ -25,7 +40,7 @@ class Home extends Component {
                 <Posts/>
             </div>
         );
-    }
+   
 }
 
 export default Home;
