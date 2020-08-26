@@ -13,11 +13,11 @@ class profile extends Component {
 	<div class="container icons">
 		<div class="big-icon"></div>
 		<div class="rate">
-			<a class="star-btn add-btn btn-floating btn-large waves-effect waves-light blue darken-1"><i class="material-icons">star</i></a>
-			<a class="like-btn add-btn btn-floating btn-large waves-effect waves-light blue darken-1"><i class="material-icons">thumb_up</i></a>
+			<a class="star-btn add-btn btn-floating btn-large waves-effect waves-light blue darken-1"><i class="fab fa-lg fa-instagram"></i></a>
+			<a class="like-btn add-btn btn-floating btn-large waves-effect waves-light blue darken-1"><i class="fab fa-lg fa-instagram"></i></a>
 		</div>
 		<div class="add">
-			<a class="add-btn btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
+			<a class="add-btn btn-floating btn-large waves-effect waves-light red"><i class="fab fa-lg fa-instagram"></i></a>
 		</div>
 	</div>
 	<div class="details">

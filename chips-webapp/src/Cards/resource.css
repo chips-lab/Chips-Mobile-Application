@@ -1,0 +1,48 @@
+
+.cards {
+    width:250px;
+    height:150px;                 /* Set width of cards */
+    display: flex;                /* Children use Flexbox */
+    flex-direction: column;       /* Rotate Axis */
+    border: 1px solid #9ac9ef;    /* Set up Border */
+    border-radius: 30px;           /* Slightly Curve edges */
+    overflow: hidden;             /* Fixes the corners */
+    margin: 5px;    
+    -webkit-box-shadow: -1px 4px 15px -2px rgba(0,0,0,0.56);
+-moz-box-shadow: -1px 4px 15px -2px rgba(0,0,0,0.56);
+box-shadow: -1px 4px 15px -2px rgba(0,0,0,0.56);              /* Add space between cards */
+  }
+  
+  .card-headers {
+    color: #678ab9;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 600;
+    border-bottom: 1px solid #9ab8ef;
+    background-color: #ebf5ff;
+    padding: 5px 10px;
+  }
+  
+  .card-mains {
+    display: flex;              /* Children use Flexbox */
+    flex-direction: column;     /* Rotate Axis to Vertical */
+    justify-content: center;    /* Group Children in Center */
+    align-items: center;        /* Group Children in Center (on cross axis) */
+    padding: 15px 0;            /* Add padding to the top/bottom */
+  }
+  
+  .material-icons {
+    font-size: 36px;
+    color: #2e484d;
+    margin-bottom: 5px;
+  }
+.imgs {
+  margin-top:20px;
+  margin:50px;
+  height: 50px;
+}
+  .main-descriptions {
+    color: #2fbad3;
+    font-size: 12px;
+    text-align: center;
+  }

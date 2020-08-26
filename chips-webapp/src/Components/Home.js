@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import Posts  from './Post/Posts';
-import Resource from './Resources/ResourceCorsol';
+import Posts  from '../Cards/card';
+import Resource from './Resources/Resource';
+import './home.css';
 import {
     BrowserRouter as Router,
     Switch,
@@ -11,6 +12,7 @@ import {
     Redirect
   } from "react-router-dom";
   import fire from '../Config/Fire';
+  import Recomendation from '../Cards/recomendation';
 const  Home = () => {
 
 
@@ -26,18 +28,20 @@ const  Home = () => {
 
    
         return (
-            <div>
+            <div >
 
                 <div>
-<Link  className="btn  btn-elegant" to={{ pathname: '/createPost'}}>create</Link>
 
-<a  type="button" class="btn btn-unique" onClick={Logout}> Logout</a>
-
+<Recomendation/>
                 </div>
 <hr/>
+<div class="h-color">
+<Link  className="btn  btn-elegant" to={{ pathname: '/createPost'}}>create</Link>
 
 
+<a  type="button" class="btn btn-unique" onClick={Logout}> Logout</a>
                 <Posts/>
+                </div>
             </div>
         );
    

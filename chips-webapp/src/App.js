@@ -17,6 +17,8 @@ import PrivateRoute from './Config/PrivateRoute';
 import Error from './Components/404';
 import User from './Components/Profile/profile';
 import  Imp from './Components/Nav/import';
+import Resource from './Components/Resources/Resource';
+import ResourceView from './Components/Resources/resourceView';
 function App() {
       
   
@@ -31,8 +33,9 @@ function App() {
     <Route exact path="/login" component={Login} />
     <Route exact path="/signup" component={Signup} />
     <PrivateRoute exact path="/createPost" component={CreatePost} />
-
+    <PrivateRoute exact path="/Resource" component={Resource} />
     <PrivateRoute exact path="/Profile" component={User} />
+    <PrivateRoute exact path="/StudentResource" component={ResourceView} />
 
     
     <Route render={function(){
