@@ -7,7 +7,7 @@ import {
   useRouteMatch,
   useParams
 } from "react-router-dom";
-import CreatePost from './Components/Post/uPost';
+import CreatePost from './Components/Form/postForm';
 import Home from './Components/Home';
 import Login from './Components/Auth/Login/Login';
 import Signup from './Components/Auth/SignUp/Signup';
@@ -19,6 +19,8 @@ import User from './Components/Profile/profile';
 import  Imp from './Components/Nav/import';
 import Resource from './Components/Resources/Resource';
 import ResourceView from './Components/Resources/resourceView';
+import PostDetail from './Components/Post/postDetail';
+import ProfileEdit from './Components/Form/profileEdit';
 function App() {
       
   
@@ -35,8 +37,11 @@ function App() {
     <PrivateRoute exact path="/createPost" component={CreatePost} />
     <PrivateRoute exact path="/Resource" component={Resource} />
     <PrivateRoute exact path="/Profile" component={User} />
+    <PrivateRoute exact path="/detail" component={PostDetail}/>
     <PrivateRoute exact path="/StudentResource" component={ResourceView} />
+    <PrivateRoute exact path="/Profile/Edit" component={ProfileEdit}/>
 
+    
     
     <Route render={function(){
                         return (<Error/>); 

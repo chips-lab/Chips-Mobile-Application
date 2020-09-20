@@ -13,8 +13,13 @@ class Resource extends Component {
                 
             <div class="container r">
  
+            <br/>
+ <div class="float-right"><button class="btn btn-default"> <i class="fas fa-plus ml-1"></i></button></div>
+ 
+ <br/> 
  <br/>
-
+  
+ <br/>
 <Resources/>
 
            </div>    

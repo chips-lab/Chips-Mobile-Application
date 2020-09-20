@@ -1,33 +1,78 @@
-import React, { Component } from 'react';
+import React, { useEffect,useState } from 'react';
 import './profile.css';
 import Imp from '../Nav/import';
 import User_Resource from './user_post';
-class profile extends Component {
-    render() {
-        return (
+import firebase from '../../Config/Fire';
+import pImage from '../files/profile.png';
+
+import { Link} from "react-router-dom";
+const  Profile =(props)=> {
+  const [userinfo, setUserinfo] = useState(null);
+
+
+
+      
+   const userProfile = () => {
+    var ref =  firebase.db.collection('Students').doc(props.location.state.userid);
+   
+    ref.get().then((doc)=> {
+ if(doc.exists){
+ 
+  setUserinfo( doc.data());
+//  console.log('user:',userinfo);
+//  userinfo.Description = doc.data().Description;
+//  userinfo.Membership = doc.data().Membership;
+//  userinfo.SocialLinks = doc.data().SocialLinks;
+//  userinfo.email = doc.data().email;
+ // userinfo.firstname = doc.data().
+ }else {
+   console.log('no such document');
+ }
+     
+    }).catch((error)=> {
+ console.log('error getting document:', error);
+    });
+
+    return userinfo;
+  }
+
+    useEffect(() => {
+     
+      userProfile();
+
+    },[userinfo,userProfile]);
+
+   return (
             <div>
-                <Imp/>
+ 
+     {userinfo !== null   ?      
        <main>
+            <Imp/>
+
+      
+      
+            
  <div class="card">
 	<div class="jumbo"></div>
 	<div class="container icons">
-		<div class="big-icon"></div>
+		<div class="big-icon" style ={ { backgroundImage: "url("+pImage+")  center top" } }></div>
 		<div class="rate">
-			<a class="star-btn add-btn btn-floating btn-large waves-effect waves-light blue darken-1"><i class="fab fa-lg fa-instagram"></i></a>
-			<a class="like-btn add-btn btn-floating btn-large waves-effect waves-light blue darken-1"><i class="fab fa-lg fa-instagram"></i></a>
+    {/* <button class="btn btn-primary"><i class="fas fa-magic mr-1"></i> Left</button>
+		<button class="btn btn-default">Right <i class="fas fa-magic ml-1"></i></button> */}
 		</div>
 		<div class="add">
-			<a class="add-btn btn-floating btn-large waves-effect waves-light red"><i class="fab fa-lg fa-instagram"></i></a>
-		</div>
+    {/* <button class="btn btn-default">Right <i class="fas fa-magic ml-1"></i></button>		 */}
+    </div>
 	</div>
 	<div class="details">
-		<h3>Leonardo DiCaprio</h3>
-		<p>Actor / Environmentalist</p>
+   <h3>{userinfo.username}</h3>
+   <p>{userinfo.firstname} {userinfo.lastname}</p>
 	</div>
 
     <div class="details">
-	<button type="button" class="btn btn-outline-default  waves-effect">Edit Profile</button>
-	</div>
+	<Link type="button" class="btn btn-outline-default  waves-effect" to={{ pathname: "/Profile/Edit", state:{userid:props.location.state.userid,userinfo:userinfo}}} >Edit Profile</Link>
+	
+  </div>
 
 
 	<div class="container bio">
@@ -35,7 +80,7 @@ class profile extends Component {
 				<h6>Biography</h6>
 			</div>
 			<div class="content">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro officiis fugit hic.</p>
+ {userinfo.Description != '' ?   <p> {userinfo.Description} </p>: 'you have No description.'}
 			</div>
 			<hr />
                  
@@ -52,9 +97,9 @@ class profile extends Component {
             <li>
               <a class="mx-3" role="button"><i class="fab fa-lg fa-linkedin-in"></i></a>
             </li>
-            <li>
+            {/* <li>
               <a class="mx-3" role="button"><i class="fas fa-lg fa-envelope-square"></i></a>
-            </li>
+            </li> */}
           </ul>
 			<hr />
 
@@ -63,13 +108,20 @@ class profile extends Component {
 
     <User_Resource/>
 </main>
+:  ''}
+
 </div>
     
  
       
      
-        );
-    }
+  
+    
+   );
+
+
+
+
 }
 
-export default profile;
+export default Profile;

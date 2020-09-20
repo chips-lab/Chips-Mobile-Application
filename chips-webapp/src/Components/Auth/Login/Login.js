@@ -1,4 +1,4 @@
-import React, { useCallback, useContext } from 'react';
+import React, { useCallback, useContext,useState } from 'react';
 import './css/util.css';
 import './css/main.css';
 import font2 from './fonts/font-awesome-4.7.0/css/font-awesome.min.css';
@@ -8,13 +8,13 @@ import GoogleSignIn from  '../GoogleAuth';
 import {Link,withRouter,Redirect   } from "react-router-dom";
 import fire from '../../../Config/Fire';
 import {Authentication, AuthContext} from '../../../Config/Auth';
-
+import Swal from 'sweetalert2';
 
 
 
 const Login = ({history}) =>{
   
-
+const [error,setError] = useState('');
 	const handleLogin = useCallback ( async event => {
 
 		event.preventDefault();
@@ -27,7 +27,8 @@ const Login = ({history}) =>{
 		await fire.auth.signInWithEmailAndPassword(email.value,password.value);
         history.push("/");
     }catch(error){
-        console.log(error);
+		console.log(error);
+		setError("password or email address does not matched");
     
 
 	}
@@ -87,8 +88,14 @@ if(currentUser) {
 							Login
 						</button>
 					</div>
+					<div class="p-t-31 p-b-9">
+						<span class="txt1">
+							 <span  style={{color:'red',fontSize:12}} class="txt1">{error}</span> 
 
-					<div class="text-center p-t-12">
+						</span>
+					 	
+					</div>
+			 		<div class="text-center p-t-12">
 						<span class="txt1">
 							Forgot
 						</span>

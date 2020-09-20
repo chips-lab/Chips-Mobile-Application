@@ -20,6 +20,12 @@
   --body-color: #dddee0;
 }
 
+.sticky2 {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
 * {
   outline: none;
   box-sizing: border-box;

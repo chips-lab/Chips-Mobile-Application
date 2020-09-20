@@ -1,7 +1,7 @@
 import React , { useCallback, useState }  from 'react';
 import util from './css/util.css';
 import main from './css/main.css';
-import File from  './images/profile.png';
+
 import f from './images/icons/favicon.ico';
 import s from './fonts/Linearicons-Free-v1.0.0/icon-font.min.css';
 import  o from'./images/icons/icon-google.png';
@@ -121,6 +121,7 @@ try{
 console.log('get data'+ firstname.value);
    await fire.auth.createUserWithEmailAndPassword(email.value,password.value);
 
+
    console.log('created Email Auth');
 	
 
@@ -147,7 +148,7 @@ console.log('get data'+ firstname.value);
 	   Description:'',
 	   email:email.value,
 	   Membership:['CHIPS'],
-	   SocialLinks:[email.value],
+	   SocialLinks:{facebook:'facebook',linkedin:'linkedin',instagram:'instagram',twitter:'twitter',github:'github'},
 	   photourl:'',
 	  
    

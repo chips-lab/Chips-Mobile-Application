@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Posts  from '../Cards/card';
 import Resource from './Resources/Resource';
-import './home.css';
+
 import {
     BrowserRouter as Router,
     Switch,
@@ -32,7 +32,7 @@ const  Home = () => {
 
                 <div>
 
-<Recomendation/>
+{/* <Recomendation/> */}
                 </div>
 <hr/>
 <div class="h-color">
