@@ -1,0 +1,94 @@
+
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+.mdc-bottom-navigation {
+  height: 56px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  box-sizing: border-box;
+  color: #424242;
+  background-color: #fff;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.35);
+  z-index: 8;
+}
+.mdc-bottom-navigation__actions {
+  width: 100%;
+  padding: 0;
+  list-style: none;
+  margin: auto;
+  height: 100%;
+  text-align: center;
+}
+.mdc-bottom-navigation__action {
+  height: 100%;
+}
+.mdc-bottom-navigation__action > a {
+  font-family: Roboto, sans-serif;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  text-decoration: inherit;
+  text-transform: inherit;
+  height: 100%;
+  padding: 8px 12px 10px 12px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  color: rgba(66, 66, 66, 0.7);
+  transition: padding-top 240ms 0ms cubic-bezier(0, 0, 0.2, 1), color 240ms 0ms cubic-bezier(0, 0, 0.2, 1), background-color 240ms 0ms cubic-bezier(0, 0, 0.2, 1);
+}
+.mdc-bottom-navigation__action > a:hover, .mdc-bottom-navigation__action > a:focus {
+  color: #424242;
+  background-color: rgba(66, 66, 66, 0.05);
+}
+.mdc-bottom-navigation__action.mdc-bottom-navigation__action--active > a {
+  color: #424242;
+  background-color: transparent;
+  cursor: default;
+  padding-top: 6px;
+}
+.mdc-bottom-navigation__label {
+  transition: font-size 240ms 0ms cubic-bezier(0, 0, 0.2, 1);
+  display: block;
+  line-height: 1;
+  margin-top: auto;
+}
+
+.mdc-bottom-navigation--fixed .mdc-bottom-navigation__actions {
+  display: flex;
+  justify-content: center;
+  max-width: 840px;
+}
+.mdc-bottom-navigation--fixed .mdc-bottom-navigation__action {
+  flex-grow: 1;
+  flex-basis: 0;
+  min-width: 80px;
+  max-width: 168px;
+}
+.mdc-bottom-navigation--fixed .mdc-bottom-navigation__action > a {
+  font-size: 12px;
+}
+.mdc-bottom-navigation--fixed .mdc-bottom-navigation__action.mdc-bottom-navigation__action--active > a {
+  font-size: 14px;
+}
+
+html, body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+
+.sticky {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
