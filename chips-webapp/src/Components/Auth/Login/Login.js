@@ -9,6 +9,7 @@ import {Link,withRouter,Redirect   } from "react-router-dom";
 import fire from '../../../Config/Fire';
 import {Authentication, AuthContext} from '../../../Config/Auth';
 import Swal from 'sweetalert2';
+import { functions } from 'firebase';
 
 
 
@@ -25,7 +26,13 @@ const [error,setError] = useState('');
 
 
 		await fire.auth.signInWithEmailAndPassword(email.value,password.value);
-        history.push("/");
+		Swal.fire({
+			title: 'success',
+			text: 'Post Created Successfully',
+			icon: 'success',
+			confirmButtonText: 'OK'
+		  });
+        
     }catch(error){
 		console.log(error);
 		setError("password or email address does not matched");

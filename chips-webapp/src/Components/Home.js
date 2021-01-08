@@ -12,6 +12,13 @@ import {
     Redirect
   } from "react-router-dom";
   import fire from '../Config/Fire';
+  import {
+    BrowserView,
+    MobileView,
+    isBrowser,
+    isMobile
+  } from "react-device-detect";
+  
   import Recomendation from '../Cards/recomendation';
 const  Home = () => {
 

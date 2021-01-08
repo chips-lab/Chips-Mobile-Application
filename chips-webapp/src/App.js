@@ -21,6 +21,9 @@ import Resource from './Components/Resources/Resource';
 import ResourceView from './Components/Resources/resourceView';
 import PostDetail from './Components/Post/postDetail';
 import ProfileEdit from './Components/Form/profileEdit';
+import event from './Components/Events/event';
+import about from './Components/Agenda/agenda';
+import '../src/App.css';
 function App() {
       
   
@@ -30,6 +33,7 @@ function App() {
  <Router>
    <Imp/>
    <Nav/>
+   
     <Switch>
     <PrivateRoute exact path="/" component={Home} />
     <Route exact path="/login" component={Login} />
@@ -40,6 +44,8 @@ function App() {
     <PrivateRoute exact path="/detail" component={PostDetail}/>
     <PrivateRoute exact path="/StudentResource" component={ResourceView} />
     <PrivateRoute exact path="/Profile/Edit" component={ProfileEdit}/>
+    <PrivateRoute exact path="/event" component={event}/>
+    <PrivateRoute exact path="/about" component={about}/>
 
     
     

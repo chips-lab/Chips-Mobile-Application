@@ -92,6 +92,14 @@ console.log(inputList);
 
     return userinfo;
   }
+  const geturl= async () => {
+    return 
+
+
+    
+
+
+  }
   const uploadMedia = ()=>{
     const uploadTask = fire.storage.ref(`Post_Media/${postMedia.name}`).put(postMedia);
     setupload(uploadTask);
@@ -111,8 +119,7 @@ console.log(inputList);
     .then( url => {
       setMUrl(url);
    return url;
-      urls = url;
-      console.log("a",Murl, urls);
+      
     })
       }
     )
@@ -149,10 +156,12 @@ Media_url:'',
 };
 console.log(Post, "userinfo:",userinfo);
 if(postMedia!=null){
+  
  
-  let url = uploadMedia();
-console.log('url:',url);
+   uploadMedia();
 
+ await  fire.storage.ref("Post_Media").child(postMedia.name).getDownloadURL().then( url => {
+     console.log(url);
   Post ={
     Information:Description,
     Title:Title,
@@ -162,21 +171,29 @@ console.log('url:',url);
       Media_url:url,
 mediaName:postMedia.name,
     username:  userinfo.username,
-    comments:'0',
+    comments:'0', 
     likes:'0'
   };
-if(Murl == ''){
-  
-}
-console.log('true');
-}
-  
 
-await fire.db.collection('Post').add({
+console.log('true' ,Post);
+
+});
+
+await fire.db.collection('post2').add({
 
   UsersPost : Post
   
 });
+}else {
+await fire.db.collection('post2').add({
+
+  UsersPost : Post
+  
+});
+}
+  
+
+
   console.log(Post);
 Swal.fire({
   title: 'success',
@@ -208,15 +225,23 @@ history.push("/");
 
         return (
             <div>{userProfile!=null? <div>
+              <br/>
+              <br/>
+              <br/>
+
+<br/>
+
+          <div >   
                 <h5 class=" info-color white-text text-center py-4">
     <strong>MAKE A Post</strong>
+    
 </h5>
-
+</div>
 
          <section class="container">
              
 
-<br/>
+
 <form onSubmit={handleCreate}>
 	
 	<div class="form-group">
@@ -278,7 +303,11 @@ history.push("/");
         );
       })} */}
 <br/>
+
 <button class="btn btn-info btn-block my-4" type="submit">Post</button>
+<br/>
+<br/>
+
 </form>
 
 

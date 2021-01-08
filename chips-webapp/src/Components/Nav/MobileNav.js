@@ -17,8 +17,8 @@ const  MobileNav = (props) => {
     const [userid,setUserid] = useState('');
     useEffect(() => {
      
-      
-      setUserid(  props.location.state.userid);
+    setUserid( props.userid);
+     
     });
   
 
@@ -40,13 +40,18 @@ const  MobileNav = (props) => {
    
         return (
             <div >
+               {  props.userid !=  undefined ?   
+
+               <div>
+                 <br/>
+                 <br/>
 <nav class="mdc-bottom-navigation mdc-bottom-navigation--fixed sticky">
   <ul class="mdc-bottom-navigation__actions">
     <li class="mdc-bottom-navigation__action mdc-bottom-navigation__action--active">
       <Link  to={{ pathname: '/', state:{userid :userid,title:"Make"}}}>
 
         <i class="material-icons mdc-bottom-navigation__icon" aria-hidden="true">
-          Home
+          
         </i>
 
         <span class="mdc-bottom-navigation__label">
@@ -80,9 +85,11 @@ const  MobileNav = (props) => {
     </li>
   </ul>
 </nav>
+</div>
 
+: ''} 
               
-              
+
             </div>
         );
    
